@@ -1,0 +1,106 @@
+<html>
+<head>
+    <title>portfolio</title>
+    <link rel="stylesheet" href="testing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+
+    <script>
+
+        var a;
+        function visibility() {
+            if (a == 1) {
+                document.getElementById('mode').style.display = "inline";
+                document.getElementById('icon').style.display = "none";
+                return a = 0;
+            }
+            else {
+                document.getElementById('mode').style.display = "none";
+                document.getElementById('icon').style.display = "inline";
+                return a = 1;
+            }
+        }
+
+        function mode() {  // Dark Theme for Mode
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")) {
+                document.getElementById('mode').innerHTML = "Dark Mode";
+            }
+            else {
+                document.getElementById('mode').innerHTML = "Light Mode";
+            }
+        }
+
+        function icon() {  // Dark Theme for Icon
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")) {
+                document.getElementById('icon').className = "fa-solid fa-moon";
+            }
+            else {
+                document.getElementById('icon').className = "fa-solid fa-sun";
+            }
+        }
+
+    </script>
+
+    <div class="navbar">
+
+        <div class="name">
+            <h2 class="text" onclick="visibility()">Ishank</h2>
+        </div>
+
+        <div class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Interests</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="theme">
+            <button type="button" class="btn" onclick="mode()" hidden id="mode">Light Mode</button>
+            <a class="social" ><i class="fa-solid fa-sun" onclick="icon()" id="icon"></i></a>
+        </div>
+
+    </div>
+
+    <div class="content">
+        <div class="info">
+            <h1>I am <span>Ishank Sharma</span></h1>
+            <h2>I'm a UI & UX Designer</h2>
+            <p>Welcome to my Portfolio Website I put all <br> my work related to my designs and many more.</p>
+            <a href="/project/musicandy/index.html"><button type="button" class="btn" id="cv">Listen Music</button></a>
+        </div>
+
+        <div class="img-box">
+            <img src="img/back.png" alt="loading..." id="back">
+            <img src="img/11.png" alt="processing..." id="man">
+        </div>
+    </div>
+
+    <div class="mediacons">
+        <div class="social">
+            <div class="facebook">
+                <a href="https://www.facebook.com/profile.php?id=100069745655947" target="_blank"><i
+                        class="fa-brands fa-facebook-square"></i></a>
+            </div>
+            <div class="insta">
+                <a href="https://www.instagram.com/ishanksharmaa/" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="github">
+                <a href="https://github.com/ishanksharmaa/" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <div class="twitter">
+                <a href="https://twitter.com/IshankS76704796" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <div class="linkedin">
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
